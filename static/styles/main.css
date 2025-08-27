@@ -1,0 +1,140 @@
+:root{
+    --nav-height: 70px;
+    --nav-icon-height: 40px;
+    --nav-height-collapsed: 50px;
+    --nav-icon-height-collapsed: 25px;
+    --off-white: #EEEEEE;
+    --orange: rgb(255, 150, 0);
+    --orange-2: rgb(206, 86, 22);
+}
+
+@font-face{
+    font-family: 'nasalization';
+    src: url('../fonts/Nasalization\ Rg.otf') format('opentype');
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+        /***********
+        ** NAVBAR **
+        ***********/
+
+header{
+    height: var(--nav-height);
+    /* background-color: var(--orange-2); */
+    display:flex;
+    justify-content: space-between; 
+    width:75%; 
+    padding: 5px 12.5%;
+    position:fixed;
+    top: 0px;
+    align-items: center;
+    font-family: nasalization;
+    font-size: 1rem;
+
+    transition: height 0.25s ease
+}
+
+header.collapse{
+    height: var(--nav-height-collapsed);
+}
+
+.nav-icon{
+    color: var(--orange-2);
+    font-size: 1.6rem;
+    display:flex;
+    height:var(--nav-icon-height);
+    align-items: center;
+    transition: font-size 0.25s ease;
+}
+
+.nav-icon.collapse{
+    font-size: 1.2rem;
+}
+
+.nav-icon>div>img{
+    height:var(--nav-icon-height);
+    transition: height 0.25s ease
+}
+
+.nav-icon.collapse>div>img{
+    height:var(--nav-icon-height-collapsed);
+}
+
+.left-nav-div{
+    display:flex;
+}
+
+.right-nav-div{
+    display: flex;
+}
+
+.right-nav-div>li{
+    font-size: 0.8rem;
+    list-style: none;
+    /* background-color: var(--off-white); */
+    padding: 5px 10px;
+    margin: 0 2.5px;
+    border-radius: 5px;
+}
+
+.right-nav-div>li:hover{
+    transition: background-color 0.25s ease;
+    background-color: var(--orange-2);
+    border-radius: 5px;
+}
+
+        /************************
+        ** MAIN PAGE TEMPLATES **
+        ************************/
+
+.hero-title{
+    font-size: 2.5rem;
+    color: var(--orange-2);
+    font-family: nasalization;
+}
+
+.hero-section{
+    justify-self: center;
+    width: 75vw;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+        /***********
+        ** FOOTER **
+        ***********/
+
+footer{
+    justify-items: center;
+    background-color: var(--orange-2);
+    width:100%;
+    justify-self: center;
+    padding: 10px 0;
+    color: var(--off-white)
+}
+
+footer>ul{
+    /* justify-self: center; */
+    width: 350px;
+    display: flex;
+    /* padding: 15px 0; */
+}
+
+footer>ul>li{
+    list-style: none;
+    padding: 5px 20px;
+}
+
+footer>p{
+    width: 50%;
+    padding: 15px 0;
+    font-size: 1rem;
+}
+
+footer>ul>li>a>svg{
+    fill: var(--off-white)
+}
