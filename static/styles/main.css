@@ -1,11 +1,17 @@
 :root{
-    --nav-height: 70px;
-    --nav-icon-height: 40px;
-    --nav-height-collapsed: 50px;
-    --nav-icon-height-collapsed: 25px;
+    --nav-height: 90px;
+    --nav-icon-height: 60px;
+    --nav-height-collapsed: 70px;
+    --nav-icon-height-collapsed: 40px;
+
+    --slideshow-height: 80vh;
+
     --off-white: #EEEEEE;
-    --orange: rgb(255, 150, 0);
+    --off-white-50-opacity: rgba(238,238,238,0.75);
+    --orange: rgb(136, 53, 8);
     --orange-2: rgb(206, 86, 22);
+    --orange-2-50-opacity: rgba(206, 86, 22, 0.75);
+    --grey: rgb(56, 56, 56);
 }
 
 @font-face{
@@ -18,12 +24,21 @@ a {
     color: #222;
 }
 
+.orange{
+    background-color: var(--orange-2);
+}
+
+.white{
+    background-color: var(--off-white);
+}
+
         /***********
         ** NAVBAR **
         ***********/
 
 header{
     height: var(--nav-height);
+    z-index:10;
     /* background-color: var(--orange-2); */
     display:flex;
     justify-content: space-between; 
@@ -33,9 +48,9 @@ header{
     top: 0px;
     align-items: center;
     font-family: nasalization;
-    font-size: 1rem;
+    /* font-size: 1.5rem; */
 
-    transition: height 0.25s ease
+    transition: height 0.25s ease;
 }
 
 header.collapse{
@@ -44,16 +59,16 @@ header.collapse{
 
 .nav-icon{
     color: var(--orange-2);
-    font-size: 1.6rem;
+    font-size: 2rem;
     display:flex;
     height:var(--nav-icon-height);
     align-items: center;
     transition: font-size 0.25s ease;
 }
 
-.nav-icon.collapse{
-    font-size: 1.2rem;
-}
+/* .nav-icon.collapse{
+    font-size: 1.5rem;
+} */
 
 .nav-icon>div>img{
     height:var(--nav-icon-height);
@@ -73,9 +88,9 @@ header.collapse{
 }
 
 .right-nav-div>li{
-    font-size: 0.8rem;
+    font-size: 1rem;
     list-style: none;
-    /* background-color: var(--off-white); */
+    background-color: var(--off-white-50-opacity);
     padding: 5px 10px;
     margin: 0 2.5px;
     border-radius: 5px;
@@ -83,7 +98,7 @@ header.collapse{
 
 .right-nav-div>li:hover{
     transition: background-color 0.25s ease;
-    background-color: var(--orange-2);
+    background-color: var(--orange-2-50-opacity);
     border-radius: 5px;
 }
 
@@ -91,17 +106,43 @@ header.collapse{
         ** MAIN PAGE TEMPLATES **
         ************************/
 
-.hero-title{
-    font-size: 2.5rem;
+hero-title{
+    font-size: 3rem;
     color: var(--orange-2);
     font-family: nasalization;
+    text-align: left;
 }
 
-.hero-section{
+hero-page{
+    color: var(--off-white);
     justify-self: center;
     width: 75vw;
     text-align: left;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+}
+
+slideshow-container{
+    width:100vw;
+    height:var(--slideshow-height);
+    position: relative;
+    display: block;
+}
+
+.slide{
+    display: flex;
+    align-items: center;
+    width:100vw;
+    height:var(--slideshow-height);
+    position: absolute;
+    transition: opacity 0.5s ease;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.slide>img{
+
+    width:100%;
+    vertical-align:baseline;
 }
 
         /***********
@@ -119,7 +160,7 @@ footer{
 
 footer>ul{
     /* justify-self: center; */
-    width: 350px;
+    width: 400px;
     display: flex;
     /* padding: 15px 0; */
 }

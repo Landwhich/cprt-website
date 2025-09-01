@@ -35,16 +35,35 @@
     </header>
 
     <!-- intro page -->
-    <div class="hero-section" style="margin-top: 60vh;">
-        <h1 class="hero-title">Robotics For Everyone</h1>
-        <p>lorem ipsum</p>
+    <div>
+        <div class="white" style="padding-top: 12vh"></div>
+        <div class="orange" style="padding-top: 3vh"></div>
+        <slideshow-container>
+
+            <hero-page style="z-index: 1; position: absolute; left: 12.5%; top: 30vh;">
+                <hero-title>Robotics For Everyone</hero-title>
+                <p>lorem ipsum</p>
+            </hero-page>
+
+            <!-- div to dim the images -->
+            <div style="position:absolute; width:100%; height:100%; background-color: rgba(0,0,0,0.6);"></div>
+
+            <!-- images go here... -->
+            <div class="slide">
+                <img src="./static/images/slides/car-drumheller.jpeg">
+            </div>
+            <div class="slide">
+                <img src="./static/images/slides/ivan_phone.jpeg">
+            </div>
+            <!-- ... to here -->
+        </slideshow-container>
     </div>
 
-    <p style="padding-top: 30vh;"></p>
+    <!-- <p style="padding-top: 20vh;"></p> -->
 
     <!-- footer -->
     <footer>
-        <p>Check out our social media resources to stay in touch and up to date. Thanks for stopping by</p>
+        <p>Check out our socials to stay in touch and up to date. Thanks for stopping by</p>
         <ul>
             <li><a href="https://discord.gg/bWAqHbA32D">
                 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
@@ -72,10 +91,20 @@
                     <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
                 </svg>
             </a></li>
+            <li><a href="mailto:external@curover.ca">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                </svg>
+            </a></li>
         </ul>
         <p style="font-size: 0.75rem">© Copyright Carleton Planertary Robotics Team 2025 | All rights reserved</p>
     </footer>
 <!-- Load scripts after DOM loads -->
 <script src="./scripts/navbar.js"></script>
+<script src="./scripts/slides.js"></script>
+<script>
+    let slideIndex = 0;
+    showSlides();
+</script>
 </body>
 </html>
