@@ -3,11 +3,11 @@
     justify-self: center;
     grid-template-columns: 24% 24% 24% 24%;
     gap: 1%;
-    padding: 10px 1.5%;
+    padding: 15px 1.5%;
 }
 
 merch-card{
-    background-color: var(--orange-2-50-opacity);
+    background-color: var(--light-grey);
     position: relative;
     align-items: center;
     display: grid;
@@ -15,10 +15,16 @@ merch-card{
     border-radius: 10px;
     width: 100%;
     overflow: hidden;
+    transition: background-color 0.25s ease,
+                color 0.25s ease;
+}
+
+merch-card:hover{
+    color: var(--off-white);
+    background-color: var(--orange-2);
 }
 
 merch-card>h1{
-    color: var(--off-white);
     padding-left: 5%;
     text-align:left;
     padding-top: 3%;
@@ -37,26 +43,12 @@ merch-card>div{
     height: 100%;
 }
 
-.merch-screen{
-    opacity:1;
-    position:absolute;
-    background-color: var(--orange-30-opacity);
-    width:100%;
-    height:100%;
-    transition: opacity 0.25s ease;
-}
-
-.merch-screen:hover{
-    opacity:0;
-}
-
 .price{
-    z-index: 1;
+    font-size: 1rem;
     position: absolute;
     right: 0.5rem;
     bottom: 0.25rem;
     font-weight: 900;
-    color: var(--off-white);
 }
 
 merch-card>div>img{

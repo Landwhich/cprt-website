@@ -1,18 +1,19 @@
 :root{
-    --nav-height: 90px;
-    --nav-icon-height: 60px;
-    --nav-height-collapsed: 70px;
-    --nav-icon-height-collapsed: 40px;
+    --nav-height: 80px;
+    --nav-icon-height: 45px;
+    --nav-height-collapsed: 50px;
+    --nav-icon-height-collapsed: 25px;
 
     --slideshow-height: 80vh;
 
+    --off-black: #222;
     --off-white: #EEEEEE;
+    --light-grey: #DDDDDD;
     --off-white-50-opacity: rgba(238,238,238,0.75);
     --orange: rgb(136, 53, 8);
     --orange-30-opacity: rgba(136, 53, 8, 0.30);
     --orange-2: rgb(206, 86, 22);
     --orange-2-50-opacity: rgba(206, 86, 22, 0.5);
-    --grey: rgb(56, 56, 56);
 }
 
 @font-face{
@@ -76,9 +77,10 @@ header.collapse{
 }
 
 .nav-icon{
-    /* color: var(--orange-2); */
+    color: var(--orange-2);
     font-size: 2rem;
     display:flex;
+    text-shadow: var(--off-black) 0 0 1px;
     height:var(--nav-icon-height);
     align-items: center;
     transition: font-size 0.25s ease;
@@ -90,7 +92,7 @@ header.collapse{
 
 .nav-icon>div>img{
     height:var(--nav-icon-height);
-    transition: height 0.25s ease
+    transition: height 0.25s ease;
 }
 
 .nav-icon.collapse>div>img{

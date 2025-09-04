@@ -11,8 +11,8 @@ body{
     text-align: center;
     font-size: 12px;
     font-family: Sans-Serif;
-    background-color: #EEEEEE;
+    background-color: var(--off-white);
 
     /* color text */
-    color: #222;
+    color: var(--off-black);
 }
