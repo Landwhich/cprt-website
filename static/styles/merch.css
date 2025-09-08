@@ -1,9 +1,9 @@
 .merch-container{
     display: grid;
     justify-self: center;
-    grid-template-columns: 24% 24% 24% 24%;
-    gap: 1%;
-    padding: 15px 1.5%;
+    grid-template-columns: 23vw 23vw 23vw 23vw;
+    gap: 1vw;
+    padding: 30px 2.5vw;
 }
 
 merch-card{
@@ -28,7 +28,7 @@ merch-card>h1{
     padding-left: 5%;
     text-align:left;
     padding-top: 3%;
-    font-size:large;
+    font-size:1.8rem;
     z-index: 1;
 }
 
@@ -44,7 +44,7 @@ merch-card>div{
 }
 
 .price{
-    font-size: 1rem;
+    font-size: 2rem;
     position: absolute;
     right: 0.5rem;
     bottom: 0.25rem;

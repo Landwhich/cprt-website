@@ -1,12 +1,13 @@
 :root{
     --nav-height: 80px;
-    --nav-icon-height: 45px;
+    --nav-icon-height: 40px;
     --nav-height-collapsed: 50px;
-    --nav-icon-height-collapsed: 25px;
+    --nav-icon-height-collapsed: 30px;
 
     --slideshow-height: 80vh;
 
-    --off-black: #222;
+    --off-black: rgb(32, 32, 32);
+    --off-black-25-opacity: rgba(32,32,32,0.25);
     --off-white: #EEEEEE;
     --light-grey: #DDDDDD;
     --off-white-50-opacity: rgba(238,238,238,0.75);
@@ -23,7 +24,13 @@
 
 a {
     text-decoration: none;
-    color: #222;
+    color: var(--off-black);
+}
+
+mark {
+    color: var(--off-white);
+    padding: 1px 5px;
+    background-color: var(--off-black);
 }
 
 h1{
