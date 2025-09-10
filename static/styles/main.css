@@ -10,11 +10,13 @@
     --off-black-25-opacity: rgba(32,32,32,0.25);
     --off-white: #EEEEEE;
     --light-grey: #DDDDDD;
+    --grey: #999999;
     --off-white-50-opacity: rgba(238,238,238,0.75);
     --orange: rgb(136, 53, 8);
     --orange-30-opacity: rgba(136, 53, 8, 0.30);
     --orange-2: rgb(206, 86, 22);
     --orange-2-50-opacity: rgba(206, 86, 22, 0.5);
+
 }
 
 @font-face{
@@ -22,8 +24,44 @@
     src: url('../fonts/Nasalization\ Rg.otf') format('opentype');
 }
 
-a {
+.mobile-blocker{
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    background-color: var(--orange-2);
+    z-index: 1000;
+    display: none;
+}
+
+@media screen and (max-width: 800px){
+    .mobile-blocker{
+        display:block
+    }
+}
+
+a{
     text-decoration: none;
+    color: inherit;
+}
+
+.button{
+    font-family: nasalization;
+    font-size: 1.6rem;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    margin: 1.5rem 0;
+    background-color: var(--orange-2);
+    color: var(--off-white);
+    /* padding: 10px 25px; */
+    border-radius: 5px;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.button:hover{
+    cursor:pointer;
+    background-color: var(--grey);
     color: var(--off-black);
 }
 
@@ -34,15 +72,23 @@ mark {
 }
 
 h1{
+    font-size: 2.5rem;
     font-family: nasalization;
+    padding: 1rem 0;
 }
 
 .orange{
     background-color: var(--orange-2);
+    color: var(--off-white);
+}
+
+.light-grey{
+    background-color: var(--light-grey);
 }
 
 .white{
     background-color: var(--off-white);
+    color: var(--off-black);
 }
 
 .rounded{
@@ -55,19 +101,21 @@ h1{
 }
 
 .title{
+    /* width:75%; */
     font-size: 2rem;
     font-family: nasalization;
-    padding: 25px 0 25px 12.5vw;
+    padding: 25px 12.5% 25px 12.5vw;
     text-align: left;
 }
 
 .card{
+    font-family: sans-serif;
+    font-size: 1.3rem;
     margin: 15px 10px;
-}
-
-.text{
-    text-align: left;
-    padding: 10px 35px;
+    padding: 1.25% 2.5%;
+    width: 70%;
+    justify-self: center;
+    text-align:left;
 }
 
         /***********
@@ -105,10 +153,6 @@ header.collapse{
     transition: font-size 0.25s ease;
 }
 
-/* .nav-icon.collapse{
-    font-size: 1.5rem;
-} */
-
 .nav-icon>div>img{
     height:var(--nav-icon-height);
     transition: height 0.25s ease;
@@ -127,17 +171,23 @@ header.collapse{
 }
 
 .right-nav-div>li{
-    font-size: 1rem;
+    font-size: 1.1rem;
     list-style: none;
-    background-color: var(--off-white-50-opacity);
+    background-color: var(--light-grey);
     padding: 5px 10px;
     margin: 0 2.5px;
     border-radius: 5px;
 }
 
+.right-nav-div>:first-child{
+    pointer-events: none;   
+}
+
 .right-nav-div>li:hover{
-    transition: background-color 0.25s ease;
-    background-color: var(--orange-2-50-opacity);
+    color: var(--off-white);
+    transition: background-color 0.25s ease,
+                color 0.25s ease;
+    background-color: var(--orange-2);
     border-radius: 5px;
 }
 
@@ -159,7 +209,7 @@ hero-page{
     justify-self: center;
     width: 75vw;
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 hero-page>p{
