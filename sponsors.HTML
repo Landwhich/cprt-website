@@ -3,8 +3,7 @@
 <head>
     <link href="./static/styles/reset.css" rel="stylesheet">
     <link href="./static/styles/main.css" rel="stylesheet">
-    <link href="./static/styles/merch.css" rel="stylesheet">
-    <title>Merch</title>
+    <title>CPRT - Our Sponsors</title>
 </head>
 <body>
     <!-- Navbar -->
@@ -38,19 +37,21 @@
     <!-- page header -->
     <style>
         slideshow-container{
-            height: 30vh;
+            height: 50vh;
         }
         .slide{
-            height: 30vh;
+            height: 50vh;
         }
     </style>
     <div>
         <div class="white" style="padding-top: 12vh"></div>
-        <slideshow-container>
+        <slideshow-container class="border">
 
-            <hero-page style="z-index: 1; position: absolute; left: 12.5%; top: 5vh;">
-                <hero-title>BUY OUR STUFF</hero-title>
-                <p>please</p>
+            <hero-page style="z-index: 1; position: absolute; left: 12.5%; top: 15vh;">
+                <hero-title>Team Sponsors</hero-title>
+                <p> We are grateful to our sponsors who make it possible for us to do what we do. 
+                    Thanks to their support, we can continue prototyping, manufacturing, travelling to competitions, and growing as a team. 
+                </p>
             </hero-page>
 
             <!-- div to dim the images -->
@@ -58,7 +59,7 @@
 
             <!-- images go here... -->
             <div class="slide">
-                <img src="./static/images/slides/car-drumheller.jpeg">
+                <img src="./static/images/slides/rover-desert-wide.png">
             </div>
             <div class="slide">
                 <img src="./static/images/slides/science-task1.JPG">
@@ -67,6 +68,74 @@
         </slideshow-container>
     </div>
 
+    <style>
+        .sponsor {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--light-grey);
+        border-radius: 5px;
+        padding: 1rem;
+        overflow: hidden;
+        transition: background-color 0.2s;
+        }
+
+        .sponsor:hover {
+        background-color: var(--off-black-25-opacity);
+        }
+
+        .sponsor img {
+        max-width: 100%;
+        max-height: 100px; 
+        height: auto;
+        object-fit: contain;
+        display: block;
+        }
+    </style>
+    <div class="title border" style="display: grid; grid-template-columns: 1fr 1fr; padding-left:0; text-align: center;">
+        <div>Diamond Sponsors</div>
+        <div>Platinum Sponsors</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 25px 0;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 0 25px; gap: 1rem; grid-template-rows: auto;">
+            <a class="sponsor" href=""><div><img src="./static/images/sponsors/altium.webp"></div></a>
+            <a class="sponsor" href=""><img src="./static/images/sponsors/SolidWorks-logo-600x315.webp"></a>
+            <a class="sponsor" href=""><img src="./static/images/sponsors/UTEX_logo_blue.webp"></a>
+            <a class="sponsor" href=""><img src="./static/images/sponsors/KEFC logo.png"></a>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 0 25px; gap: 1rem; grid-template-rows: auto;">
+            <a class="sponsor" href=""><div><img src="./static/images/sponsors/altium.webp"></div></a>
+            <a class="sponsor" href=""><img src="./static/images/sponsors/SolidWorks-logo-600x315.webp"></a>
+            <a class="sponsor" href=""><img src="./static/images/sponsors/UTEX_logo_blue.webp"></a>
+            <a class="sponsor" href=""><img src="./static/images/sponsors/KEFC logo.png"></a>
+        </div>
+    </div>
+    <div class="title border" style="display: grid; grid-template-columns: 1fr 1fr 1fr; padding-left:0; text-align: center;">
+        <div>Gold Sponsors</div>
+        <div>Silver Sponsors</div>
+        <div>Bronze Sponsors</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; padding: 25px 0;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; padding: 0 25px; gap: 1rem; grid-template-rows: auto;">
+            <a class="sponsor" href=""><img src="./static/images/sponsors/altium.webp"></a>
+            <a class="sponsor" href=""><img src="./static/images/sponsors/SolidWorks-logo-600x315.webp"></a>
+            <a class="sponsor" href=""><img src="./static/images/sponsors/UTEX_logo_blue.webp"></a>
+            <a class="sponsor" href=""><img src="./static/images/sponsors/KEFC logo.png"></a>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; padding: 0 25px; gap: 1rem; grid-template-rows: auto;">
+            <a class="sponsor" href=""><div><img src="./static/images/sponsors/altium.webp"></div></a>
+            <a class="sponsor" href=""><img src="./static/images/sponsors/SolidWorks-logo-600x315.webp"></a>
+            <a class="sponsor" href=""><img src="./static/images/sponsors/UTEX_logo_blue.webp"></a>
+            <a class="sponsor" href=""><img src="./static/images/sponsors/KEFC logo.png"></a>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; padding: 0 25px; gap: 1rem; grid-template-rows: auto;">
+            <a class="sponsor" href=""><div><img src="./static/images/sponsors/altium.webp"></div></a>
+            <a class="sponsor" href=""><img src="./static/images/sponsors/SolidWorks-logo-600x315.webp"></a>
+            <a class="sponsor" href=""><img src="./static/images/sponsors/UTEX_logo_blue.webp"></a>
+            <a class="sponsor" href=""><img src="./static/images/sponsors/KEFC logo.png"></a>
+        </div>
+    </div>
+    
     
 
     <!-- footer -->
