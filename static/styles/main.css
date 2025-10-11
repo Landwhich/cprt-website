@@ -25,18 +25,13 @@
 }
 
 .mobile-blocker{
-    width:100vw;
-    height:100vh;
+    padding:0 10%;
+    width:80%;
+    height:100%;
     position:fixed;
     background-color: var(--orange-2);
     z-index: 1000;
     display: none;
-}
-
-@media screen and (max-width: 800px){
-    .mobile-blocker{
-        display:block
-    }
 }
 
 a{
@@ -111,10 +106,9 @@ h1{
 .card{
     font-family: sans-serif;
     font-size: 1.3rem;
-    margin: 15px 10px;
+    margin: 10px auto;
     padding: 1.25% 2.5%;
     width: 70%;
-    justify-self: center;
     text-align:left;
 }
 
@@ -274,4 +268,14 @@ footer>p{
 
 footer>ul>li>a>svg{
     fill: var(--off-white)
+}
+
+@media screen and (max-width: 800px){
+    .card{
+        width: 100%;
+    }
+    
+    /* .mobile-blocker{
+        display:block
+    } */
 }
