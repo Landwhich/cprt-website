@@ -1,20 +1,16 @@
 .team-section, .rover-section{
+    /* width:90%; */
     position:relative;
-    height: 50vh;
     color: var(--off-white);
     text-align: left;
     font-size: 1.5rem;
 }
 
-/* .rover-section>div>div>mark{
-    font-size: 1rem;
-} */
-
 .team-section>div:last-of-type, .rover-section>div:last-of-type{
+    z-index: 1;
     display:flex;
-    /* position:absolute; */
-    background-color: var(--off-black-25-opacity);
-    /* background-color: black; */
+    position:absolute;
+    top: 0;
     height: 100%;
     overflow: hidden;
 }
@@ -29,9 +25,10 @@
 }
 
 .team-section>div>img, .rover-section>div:last-of-type>img{
-    z-index: -2;
+    z-index: 0;
     width: 100%;
     align-self: center;
+    overflow: hidden;
 }
 
 .rover-section>div:first-of-type>img{
@@ -39,12 +36,19 @@
 }
 
 .team-section>div:first-of-type{
-    justify-self: center;
-    padding: 5% 0;
-    width: 75%;
-    z-index: 10;
+    background-color: var(--off-black-25-opacity);
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 2;
 }
 
-.team-section>div>h1{
+.team-section>div:first-of-type>div{
+    width:85%;
+    margin: auto;
+}
+
+.team-section>div>div>h1{
     font-size: 4rem;
+    text-shadow: var(--off-black) 0 0 1px;
 }
