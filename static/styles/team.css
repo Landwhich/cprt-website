@@ -1,4 +1,4 @@
-.team-section, .rover-section{
+.team-section{
     position:relative;
     color: var(--off-white);
     text-align: left;
@@ -7,7 +7,7 @@
     overflow: hidden;
 }
 
-.team-section>div:last-of-type, .rover-section>div:last-of-type{
+.team-section>div:last-of-type{
     z-index: 1;
     display:flex;
     position:absolute;
@@ -16,24 +16,11 @@
     overflow: hidden;
 }
 
-.rover-section>div:first-of-type{
-    display: grid;
-    position: absolute;
-    grid-template-columns: 65% 35%;
-    justify-self: center;
-    padding: 5% 12.5%;
-    width: 75%;
-}
-
-.team-section>div>img, .rover-section>div:last-of-type>img{
+.team-section>div>img{
     z-index: 0;
     width: 100%;
     align-self: center;
     overflow: hidden;
-}
-
-.rover-section>div:first-of-type>img{
-    width:100%;
 }
 
 .team-section>div:first-of-type{
@@ -53,6 +40,53 @@
     color: var(--orange-3);
     font-size: 4rem;
     text-shadow: var(--off-black) 0 0 1px;
+}
+
+.rover-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    width: 75%;
+    /* margin: 3rem auto; */
+    border-radius: 25px;
+    overflow: hidden;
+    /* background-color: var(--off-black-25-opacity); */
+}
+
+.rover-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 10px;
+    color: var(--off-white);
+    z-index: 2;
+}
+
+.rover-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.rover-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.rover-media {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rover-media img, .rover-media canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 @media screen and (max-width: 800px){
@@ -75,4 +109,19 @@
     .team-section>div>div>h1 {
         font-size: 2rem;
     }
+    .rover-section {
+        grid-template-columns: 1fr;
+        width: 95%;
+    }
+
+    .rover-media {
+        order: -1;
+        height: 300px;
+    }
+
+    .rover-text {
+        padding: 2rem 10px;
+        font-size: 1.2rem;
+    }
+
 }

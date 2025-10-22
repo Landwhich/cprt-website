@@ -19,7 +19,6 @@
     --orange-2: rgb(206, 86, 22);
     --orange-2-50-opacity: rgba(206, 86, 22, 0.5);
     --orange-3: rgb(231, 96, 23);
-
 }
 
 @font-face{
@@ -205,44 +204,51 @@ hero-title{
     color: var(--orange-2);
     font-family: nasalization;
     text-align: left;
+    text-shadow: var(--off-black) 0 0 1px;
 }
 
-hero-page{
+hero-page {
+    position: absolute;
+    z-index: 2;
+    left: 12.5%;
+    top: 10%;
+    max-width: 70%;
+}
+
+hero-page>div{
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    background-color: var(--off-black-50-opacity); 
+    border-radius: 5px;
     color: var(--off-white);
-    justify-self: center;
-    width: 75vw;
-    text-align: left;
-    font-size: 1.3rem;
 }
 
-hero-page>p{
-    padding-top: 25px;
-}
-
-slideshow-container{
-    width:100vw;
-    height:var(--slideshow-height);
+slideshow-container {
     position: relative;
+    width: 100%;
+    height: clamp(200px, 70vh, 600px);
+    overflow: hidden;
     display: block;
 }
 
-.slide{
+.slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
-    width:100vw;
-    height:100vh;
-    height:var(--slideshow-height);
-    position: absolute;
-    transition: opacity 0.5s ease;
-    overflow: hidden;
-    z-index: -1;
-    object-fit: cover;
+    justify-content: center;
+    transition: opacity 0.6s ease-in-out;
 }
 
-.slide>img{
-    width:100%;
-    vertical-align:baseline;
+.slide > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
+
 
         /***********
         ** FOOTER **
@@ -283,6 +289,26 @@ footer>ul>li>a>svg{
 }
 
 @media screen and (max-width: 800px){
+    hero-page {
+        left: 5%;
+        top: 5%;
+        max-width: 90%;
+        font-size: 1rem;
+    }
+
+    hero-page>div{
+        font-size: 1.2rem;
+    }
+
+    hero-title {
+        font-size: 2rem;
+    }
+
+    .button {
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+    }
+    
     .mobile-blocker{
         display:block;
     }
