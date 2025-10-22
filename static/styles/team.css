@@ -1,9 +1,10 @@
 .team-section, .rover-section{
-    /* width:90%; */
     position:relative;
     color: var(--off-white);
     text-align: left;
     font-size: 1.5rem;
+    padding: 50px 0;
+    overflow: hidden;
 }
 
 .team-section>div:last-of-type, .rover-section>div:last-of-type{
@@ -36,10 +37,10 @@
 }
 
 .team-section>div:first-of-type{
-    background-color: var(--off-black-25-opacity);
+    background-color: var(--off-black-75-opacity);
     position: relative;
     width: 100%;
-    padding: 20px 0;
+    padding: 25px 0 40px 0;
     z-index: 2;
 }
 
@@ -49,6 +50,29 @@
 }
 
 .team-section>div>div>h1{
+    color: var(--orange-3);
     font-size: 4rem;
     text-shadow: var(--off-black) 0 0 1px;
+}
+
+@media screen and (max-width: 800px){
+    .team-section{
+        padding: 0;
+    }
+    .team-section>div:first-of-type{
+        padding: 10px 0 20px 0;
+    }
+    .team-section>div:first-of-type>div{
+        width:90%;
+        margin: auto;
+    }
+    .team-section, .rover-section{
+        font-size: 0.8rem;
+    }
+    h1{
+        padding:0.8rem 0;
+    }
+    .team-section>div>div>h1 {
+        font-size: 2rem;
+    }
 }
