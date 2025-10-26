@@ -4,10 +4,10 @@ const navIcon = document.querySelector('.nav-icon')
 let lastScroll = 0
 
 window.addEventListener('scroll', () => {
-    if (lastScroll < window.scrollY) {
+    if (lastScroll < window.scrollY && this.window.innerWidth > 850) {
         navbar.classList.add('collapse'); 
         navIcon.classList.add('collapse'); 
-    } else {
+    } else if (this.window.innerWidth > 850){
         navbar.classList.remove('collapse');
         navIcon.classList.remove("collapse");
     }
