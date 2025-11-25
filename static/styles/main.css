@@ -60,11 +60,10 @@ a{
     background-color: var(--grey);
     color: var(--off-black);
 }
-
-mark {
-    color: var(--off-white);
+hero-title > mark {
+    color: var(--orange-2);
     padding: 1px 15px;
-    background-color: var(--off-black);
+    background-color: var(--off-black-50-opacity);
 }
 
 h1{
@@ -199,6 +198,12 @@ hero-title{
     font-family: nasalization;
     text-align: left;
     text-shadow: var(--off-black) 0 0 1px;
+
+    padding: 5px 10px;
+    background-color: var(--off-black-75-opacity); 
+    border-radius: 5px;
+
+    /* margin-bottom: 200px; */
 }
 
 hero-page {
@@ -210,9 +215,10 @@ hero-page {
 }
 
 hero-page>div{
+    margin-top: 25px;
     font-size: 1.2rem;
     padding: 5px 10px;
-    background-color: var(--off-black-50-opacity); 
+    background-color: var(--off-black-75-opacity); 
     border-radius: 5px;
     color: var(--off-white);
 }

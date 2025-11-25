@@ -12,15 +12,23 @@
     display:flex;
     position:absolute;
     top: 0;
-    height: 100%;
+    width: 100%;
     overflow: hidden;
+    object-position: center center;
 }
+
+/* .team-section { outline: 3px dashed lime; }
+.team-section > div:first-of-type { outline: 3px dashed cyan; }
+.team-section > div:last-of-type { outline: 3px dashed magenta; }
+.team-section > div:last-of-type > img { outline: 3px dashed yellow; } */
 
 .team-section>div>img{
     z-index: 0;
+    /* height: 100%; */
     width: 100%;
     align-self: center;
     overflow: hidden;
+    object-fit: cover;
 }
 
 .team-section>div:first-of-type{
