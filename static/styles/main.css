@@ -211,7 +211,9 @@ hero-page {
     z-index: 2;
     left: 12.5%;
     top: 10%;
-    max-width: 70%;
+    width: 75%;
+    justify-content: center;
+    text-align:center;
 }
 
 hero-page>div{
@@ -313,7 +315,7 @@ footer>ul>li>a>svg{
         background-color: var(--orange-3);
         font-weight:bold;
         list-style: none;
-        padding: 2% 7px 7% 7px;
+        padding: 2% 7px 10% 7px;
     }
     header>ul>li:hover{
         background-color: var(--orange);
@@ -337,7 +339,7 @@ footer>ul>li>a>svg{
     hero-page {
         left: 5%;
         top: 5%;
-        max-width: 90%;
+        width: 90%;
         font-size: 1rem;
     }
 
@@ -382,6 +384,6 @@ footer>ul>li>a>svg{
         width: 90%;
     }
     footer{
-        padding-bottom: 25%;
+        padding-bottom: 15vh;
     }
 }

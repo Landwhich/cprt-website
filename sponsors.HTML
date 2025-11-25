@@ -7,6 +7,7 @@
     <script src="scripts/components/navbar-component.js"></script> <!-- Load custom header component -->
     <script src="scripts/components/footer-component.js"></script> <!-- Load custom footer component -->
     <title>CPRT - Our Sponsors</title>
+    <link rel="icon" href="./static/images/cprt-favicon.png" type="image/x-icon">   
 </head>
 <body>
     <!-- Navbar -->
@@ -37,6 +38,13 @@
     </div>
 
     <style>
+        .sponsor-grid{
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            padding: 0 25px; 
+            gap: 1rem; 
+            grid-template-rows: auto;
+        }
         .sponsor {
             display: flex;
             align-items: center;
@@ -76,10 +84,13 @@
             height: 100%;
             border: 0;
         }
-
-        @media screen and (min-width: 850px){
-            .sponsorship-package {
-                /* padding-top: 135%; */
+        @media screen and (max-width: 1100px){
+            .sponsor-grid{
+                display: grid; 
+                grid-template-columns: 1fr; 
+                padding: 0 25px; 
+                gap: 1rem; 
+                grid-template-rows: auto;
             }
         }
 
@@ -99,7 +110,7 @@
         <div>Silver Sponsors</div>
     </div>
     <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 25px 0;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 0 25px; gap: 1rem; grid-template-rows: auto;">
+        <div class="sponsor-grid">
             <a class="sponsor" href="https://www.stellarnet.us/"><img src="./static/images/sponsors/stellar-net.png"></a>
             <a class="sponsor" href="https://www.altium.com/"><img src="./static/images/sponsors/altium.png"></a>
             <a class="sponsor" href="https://www.solidworks.com/"><img src="./static/images/sponsors/solidworks.png"></a>
@@ -107,7 +118,7 @@
             <a class="sponsor" href="https://www.kenesto.com/"><img src="./static/images/sponsors/kenesto.png"></a>
             <a class="sponsor" href="https://www.protocase.com/"><img src="./static/images/sponsors/protocase.png"></a>
         </div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 0 25px; gap: 1rem; grid-template-rows: auto;">
+        <div class="sponsor-grid">
             <a class="sponsor" href="https://missioncontrolspace.com/"><img src="./static/images/sponsors/mission-control.png"></a>
             <a class="sponsor" href="https://www.metalpros.com/"><img src="./static/images/sponsors/metalpros.png"></a>
             <a class="sponsor" href="https://odriverobotics.com/"><img src="./static/images/sponsors/odrive.png"></a>
