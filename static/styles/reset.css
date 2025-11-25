@@ -10,7 +10,7 @@ body{
     /* style text */
     text-align: center;
     font-size: 12px;
-    font-family: Sans-Serif;
+    font-family: monospace;
     background-color: var(--off-white);
 
     /* color text */
