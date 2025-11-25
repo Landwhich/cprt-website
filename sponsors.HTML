@@ -19,7 +19,7 @@
             <hero-page>
                 <hero-title>Team Sponsors</hero-title>
                 <div style="margin-top:5%;">
-                    <p style="font-size:1.35em;"> We are grateful to our sponsors who make it possible for us to do what we do. 
+                    <p> We are grateful to our sponsors who make it possible for us to do what we do. 
                     Thanks to their support, we can continue prototyping, manufacturing, travelling to competitions, and growing as a team. 
                     </p>
                 </div>
@@ -30,10 +30,7 @@
 
             <!-- images go here... -->
             <div class="slide">
-                <img src="./static/images/slides/rover-desert-wide.png">
-            </div>
-            <div class="slide">
-                <img src="./static/images/slides/science-task1.JPG">
+                <img src="./static/images/others/sponsor-banner.png">
             </div>
             <!-- ... to here -->
         </slideshow-container>
@@ -62,21 +59,43 @@
         object-fit: contain;
         display: block;
         }
+
+        .sponsorship-package {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding-top: 100%;
+            overflow: hidden;
+        }
+
+        .sponsorship-package iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        @media screen and (min-width: 850px){
+            .sponsorship-package {
+                /* padding-top: 135%; */
+            }
+        }
+
     </style>
-    <div class="title border">
-        <p style="font-size: 1.2rem;">
-            This year, their generosity has helped us make it to the 2025 Canadian International Rover Challenge, 
-            where we represented the country and achieved 3rd place. 
-        </p>
-        <br>
-        <p style="font-size: 1.2rem;">
-            Interested in supporting the next generation of engineers? Check out our sponsorship package to see how you can get involved. 
-        </p>
-        <a class="button">Sponsorship Package</a>
+    <div class="title border" style="display: grid; grid-template-columns: 1fr 1fr; padding-left:0; padding-right: 0; text-align: center;">
+        <div>Gold Sponsors</div>
+        <div>Silver Sponsors</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 25px 0;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 0 25px; gap: 1rem; grid-template-rows: auto;">
+            <a class="sponsor" href=""><img src="./static/images/sponsors/KEFC logo.png"></a>
+        </div>
     </div>
     <div class="title border" style="display: grid; grid-template-columns: 1fr 1fr; padding-left:0; padding-right: 0; text-align: center;">
-        <div>Diamond Sponsors</div>
-        <div>Platinum Sponsors</div>
+        <div>Gold Sponsors</div>
+        <div>Silver Sponsors</div>
     </div>
     <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 25px 0;">
         <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 0 25px; gap: 1rem; grid-template-rows: auto;">
@@ -91,6 +110,28 @@
             <a class="sponsor" href=""><img src="./static/images/sponsors/UTEX_logo_blue.webp"></a>
             <a class="sponsor" href=""><img src="./static/images/sponsors/KEFC logo.png"></a>
         </div>
+    </div>
+    <div class="title border">
+        <p style="font-size: 1.2rem;">
+            This year, our sponsors' generosity has helped us make it to the 2025 Canadian International Rover Challenge, 
+            where we represented the country and achieved 3rd place. 
+        </p>
+        <br>
+        <p style="font-size: 1.2rem;">
+            Interested in supporting the next generation of engineers? Check out our sponsorship package to see how you can get involved. 
+        </p>
+        <br>
+        <!--
+        Source - https://stackoverflow.com/a/7044015
+        Posted by Batfan, modified by community. See post 'Timeline' for change history
+        Retrieved 2025-11-24, License - CC BY-SA 4.0
+        -->
+        <div class="sponsorship-package">
+            <iframe 
+                src="https://drive.google.com/file/d/1QEHh8oBRgQOwtAxuUnvosWKfmpz2PiEe/preview">
+            </iframe>
+        </div>
+
     </div>
     <!-- <div class="title border" style="display: grid; grid-template-columns: 1fr 1fr 1fr; padding-left:0; padding-right: 0; text-align: center;">
         <div>Gold Sponsors</div>
